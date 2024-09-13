@@ -20,11 +20,13 @@
       <td>{{this.origem}}</td>
       <td>{{this.dataDoContacto}}</td>
       <td>{{this.observacao}}</td>
-      <td>
-        <a href="/customers/view/{{this.id}}" class="btn btn-info">Visualizar</a>
-        <a href="/customers/edit/{{this.id}}" class="btn btn-warning">Editar</a>
-        <a href="/customers/delete/{{this.id}}" class="btn btn-danger">Eliminar</a>
-      </td>
+     <td>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <a href="/customers/view/{{this.id}}" class="btn btn-info mr-2">Visualizar</a>
+    <a href="/customers/edit/{{this.id}}" class="btn btn-warning mr-2">Editar</a>
+    <a href="/customers/delete/{{this.id}}" class="btn btn-danger mr-2">Eliminar</a>
+  </div>
+</td>
     </tr>
     {{/each}}
   </tbody>

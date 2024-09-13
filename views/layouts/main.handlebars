@@ -8,10 +8,23 @@
   <title>Gestão de clientes</title>
 </head>
 <body>
-  <nav>
-    <a href="/customers">Home</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/customers">Gestão de Clientes</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/customers">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/customers/add">Adicionar Cliente</a>
+        </li>
+        
+      </ul>
+    </div>
   </nav>
 
-  {{{body}}}
+  <div class="container mt-4">
+    {{{body}}}
+  </div>
 </body>
 </html>

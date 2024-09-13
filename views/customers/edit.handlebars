@@ -5,14 +5,17 @@
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nome" class="form-control" value="{{customer.nome}}" required>
   </div>
-  <div class="form-group">
+ <div class="form-group">
     <label for="telefone">Telefone</label>
     <input type="text" name="telefone" id="telefone" class="form-control" value="{{customer.telefone}}">
   </div>
-  <div class="form-group">
-    <label for="origem">Origem</label>
-    <input type="text" name="origem" id="origem" class="form-control" value="{{customer.origem}}">
-  </div>
+<div class="form-group">
+  <label for="origem">Origem</label>
+  <select name="origem" id="origem" class="form-control">
+    <option value="Celular" {{#if (eq customer.origem 'Celular')}}selected{{/if}}>Celular</option>
+    <option value="Internet" {{#if (eq customer.origem 'Internet')}}selected{{/if}}>Internet</option>
+  </select>
+</div>
   <div class="form-group">
     <label for="dataDoContacto">Data do Contacto</label>
     <input type="date" name="dataDoContacto" id="dataDoContacto" class="form-control" value="{{customer.dataDoContacto}}">

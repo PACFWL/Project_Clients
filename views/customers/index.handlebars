@@ -1,5 +1,5 @@
-<h1>Customer List</h1>
-<a href="/customers/add" class="btn btn-primary">Add Customer</a>
+<h1>LIsta de Clientes</h1>
+<a href="/customers/add" class="btn btn-primary">Adicionar cliente</a>
 <table class="table">
   <thead>
     <tr>
@@ -20,9 +20,9 @@
       <td>{{this.dataDoContacto}}</td>
       <td>{{this.observacao}}</td>
       <td>
-        <a href="/customers/view/{{this.id}}" class="btn btn-info">View</a>
-        <a href="/customers/edit/{{this.id}}" class="btn btn-warning">Edit</a>
-        <a href="/customers/delete/{{this.id}}" class="btn btn-danger">Delete</a>
+        <a href="/customers/view/{{this.id}}" class="btn btn-info">Visualizar</a>
+        <a href="/customers/edit/{{this.id}}" class="btn btn-warning">Editar</a>
+        <a href="/customers/delete/{{this.id}}" class="btn btn-danger">Eliminar</a>
       </td>
     </tr>
     {{/each}}

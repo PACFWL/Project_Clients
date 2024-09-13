@@ -2,6 +2,7 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 const bodyParser = require('body-parser');
 const sequelize = require('./config/db');
+const moment = require('moment');
 const Customer = require('./models/Customer');
 
 const app = express();
@@ -13,7 +14,8 @@ app.engine('handlebars', engine({
     allowProtoMethodsByDefault: true
   },
   helpers: {
-    eq: (a, b) => a === b
+    eq: (a, b) => a === b,
+    formatDate: (date) => moment(date).format('YYYY-MM-DD')
   }
 }));
 app.set('view engine', 'handlebars');

@@ -16,10 +16,10 @@
     <option value="Internet" {{#if (eq customer.origem 'Internet')}}selected{{/if}}>Internet</option>
   </select>
 </div>
-  <div class="form-group">
-    <label for="dataDoContacto">Data do Contacto</label>
-    <input type="date" name="dataDoContacto" id="dataDoContacto" class="form-control" value="{{customer.dataDoContacto}}">
-  </div>
+ <div class="form-group">
+  <label for="dataDoContacto">Data do Contacto</label>
+  <input type="date" name="dataDoContacto" id="dataDoContacto" class="form-control" value="{{formatDate customer.dataDoContacto}}">
+</div>
   <div class="form-group">
     <label for="observacao">Observação</label>
     <textarea name="observacao" id="observacao" class="form-control">{{customer.observacao}}</textarea>

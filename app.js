@@ -15,7 +15,8 @@ app.engine('handlebars', engine({
   },
   helpers: {
     eq: (a, b) => a === b,
-    formatDate: (date) => moment(date).format('YYYY-MM-DD')
+    formatDate: (date) => moment(date).format('YYYY-MM-DD'),
+    formatDateSimplified: (date) => moment(date).format('DD/MM/YYYY')
   }
 }));
 app.set('view engine', 'handlebars');

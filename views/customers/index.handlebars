@@ -1,0 +1,26 @@
+<h1>Customer List</h1>
+<a href="/customers/add" class="btn btn-primary">Add Customer</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Neighborhood</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each customers}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.neighborhood}}</td>
+      <td>
+        <a href="/customers/view/{{this.id}}" class="btn btn-info">View</a>
+        <a href="/customers/edit/{{this.id}}" class="btn btn-warning">Edit</a>
+        <a href="/customers/delete/{{this.id}}" class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
